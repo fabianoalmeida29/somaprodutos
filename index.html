@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de soma de produtos</title>
+</head>
+<body>
+    
+    <table>
+        <tr>
+          <th>Nome do produto</th>
+          <th>Valor inicial</th>
+          <th>1</th>
+          <th>2</th>
+          <th>Resultado</th>
+        </tr>
+        <tr>
+          <td>Produto 1</td>
+          <td><input type="text" id="valor_inicial1"></td>
+          <td><input type="text" id="valor1_1"></td>
+          <td><input type="text" id="valor1_2"></td>
+          <td id="resultado1"></td>
+        </tr>
+        <tr>
+          <td>Produto 2</td>
+          <td><input type="text" id="valor_inicial2"></td>
+          <td><input type="text" id="valor2_1"></td>
+          <td><input type="text" id="valor2_2"></td>
+          <td id="resultado2"></td>
+        </tr>
+        <tr>
+          <td>Produto 3</td>
+          <td><input type="text" id="valor_inicial3"></td>
+          <td><input type="text" id="valor3_1"></td>
+          <td><input type="text" id="valor3_2"></td>
+          <td id="resultado3"></td>
+        </tr>
+      </table>
+      
+      <button onclick="calcular()">Calcular</button>
+      
+      <script>
+        function calcular() {
+          // Obtemos os elementos de entrada de texto das células da segunda, terceira e quarta colunas
+          var celula_inicial = document.getElementById("valor_inicial1");
+          var celulas1 = document.getElementById("valor1_1");
+          var celulas2 = document.getElementById("valor1_2");
+      
+          // Obtemos os valores das células da segunda, terceira e quarta colunas
+          var valor_inicial = parseInt(celula_inicial.value);
+          var valor1 = parseInt(celulas1.value);
+          var valor2 = parseInt(celulas2.value);
+      
+          // Calculamos o resultado
+          var resultado = valor_inicial - valor1 - valor2;
+      
+          // Atualizamos a célula da quinta coluna com o resultado
+          document.getElementById("resultado1").innerHTML = resultado;
+        }
+      </script>
+      
+      
+
+    </body>
+</html>
+
+
+
+
